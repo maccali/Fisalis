@@ -19,6 +19,8 @@
     "target": "esnext",
     "noUnusedLocals": false,
     "strictNullChecks": false,
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
     "baseUrl": "./src/core",
   },
   "exclude": ["node_modules"],

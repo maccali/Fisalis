@@ -8,6 +8,7 @@ import jwt from 'jsonwebtoken'
 
 const handler = async (request: NextApiRequest, response: NextApiResponse) => {
   response.status(200).json({ oi: 'oi' })
+  console.log(request)
 }
 
 export default authMid(common(handler))

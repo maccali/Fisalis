@@ -1,7 +1,7 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 import { NextApiRequest, NextApiResponse } from 'next'
 import { prisma } from 'services/prisma'
-import teste from 'middlewares/cookies'
+import teste from 'middlewares/common'
 import example from 'helpers/example'
 // import { User } from '@prisma/client'
 

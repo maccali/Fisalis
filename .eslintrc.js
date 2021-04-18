@@ -23,6 +23,8 @@ module.exports = {
   ],
   rules: {
     // Include .prettierrc.js rules
+    'no-unused-vars': ['warn', { 'varsIgnorePattern': '^_' }],
+    '@typescript-eslint/no-unused-vars': ['warn', { 'varsIgnorePattern': '^_' }],
     'prettier/prettier': ['error', {}, { usePrettierrc: true }],
     'react/prop-types': 'off',
     'react/react-in-jsx-scope': 'off',
