@@ -16,4 +16,6 @@ model User {
   email    String
   password String @default("")
   avatar   String @default("")
+  avatar2   String @default("")
+  avatar3   String @default("")
 }
