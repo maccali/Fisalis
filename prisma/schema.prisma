@@ -18,4 +18,5 @@ model User {
   avatar   String @default("")
   avatar2   String @default("")
   avatar3   String @default("")
+  avatar4   String @default("")
 }
