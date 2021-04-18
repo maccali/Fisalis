@@ -15,6 +15,7 @@ const handler = async (request: NextApiRequest, response: NextApiResponse) => {
 
   if (checkEmailInUse) {
     response.status(400).json({ message: 'Email in use' })
+    return
   }
 
   const user = await prisma.user.create({
