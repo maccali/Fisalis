@@ -1,5 +1,5 @@
 // import { NextApiResponse } from 'next'
-import { NextApiResponseOutput } from 'interfaces/next'
+// import { NextApiResponseOutput } from 'interfaces/next'
 
 type outStatus = 200 | 201 | 400 | 403 | 404 | 500
 
