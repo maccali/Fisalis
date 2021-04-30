@@ -1,5 +1,6 @@
 import { NextApiRequest, NextApiResponse } from 'next'
 import jwt from 'jsonwebtoken'
+import jwtHelper from 'helpers/jwt'
 
 const auth = (
   handler: (arg0: NextApiRequest, arg1: NextApiResponse) => void
@@ -8,14 +9,11 @@ const auth = (
 
   const token = barrierToken.split(' ')[1]
   console.log('jwt', jwt)
-  jwt.verify(token, 'teste', (err, decoded) => {
-    if (err) {
-      res.status(401).json({ message: 'You dont Have Permítions' })
-    }
-    if (decoded) {
-      // req.userId = decoded.userId
-    }
-  })
+
+  const respond = jwtHelper.verify(token)
+  if (!respond.positive) {
+    res.status(401).json({ message: 'You dont Have Permítions' })
+  }
 
   return handler(req, res)
 }
