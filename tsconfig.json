@@ -23,6 +23,6 @@
     "noUnusedParameters": false,
     "baseUrl": "./src/core",
   },
-  "exclude": ["node_modules"],
-  "include": ["**/*.ts", "**/*.tsx"]
+  "exclude": ["node_modules", "**/*.spec.ts"],
+  "include": ["**/*.ts", "**/*.tsx", "jest.config.js", ]
 }
