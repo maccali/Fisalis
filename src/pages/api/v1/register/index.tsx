@@ -2,7 +2,7 @@
 
 import common from 'middlewares/common'
 import output from 'interfaces/io'
-import authHelper from 'helpers/auth'
+import { AuthHelper } from 'helpers/auth'
 import userRepository from 'repositories/user'
 import {
   NextApiRequestInput,
@@ -15,7 +15,9 @@ const register = async (
 ) => {
   const { name, email, password } = request.body
 
-  const cipherPass = authHelper.encrypt(password)
+  const authHelper = new AuthHelper()
+
+  const cipherPass = authHelper.encrypt({ text: password })
   const checkEmailInUse = await userRepository.findUserByEmail(email)
 
   if (checkEmailInUse) {
